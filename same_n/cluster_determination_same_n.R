@@ -1476,7 +1476,7 @@ adjustedsi <- rbind(adjustedsi, ascm)
 
 
 
-### A2 ###
+### B2 ###
 
 dataset1 <- {
   # cluster 1
