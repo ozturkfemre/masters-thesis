@@ -307,6 +307,8 @@ two_k_same_n_valid$ascm[6,2] <- cluster.stats(d = dist(df, method = "euclidean")
 
 
 
+write.xlsx(two_k_same_n_valid, file = "C:/Users/Dell/Desktop/R/masters-thesis/same_n/validation_results/two_k_same_n_valid.xlsx" )
+
 ################################################################################
 # //////////////////////////////////////////////////////////////////////////// #
 ### ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ###
@@ -314,7 +316,7 @@ two_k_same_n_valid$ascm[6,2] <- cluster.stats(d = dist(df, method = "euclidean")
 ################################################################################
 
 #############################################
-### Validations for 2 clustered data sets ###
+### Validations for 3 clustered data sets ###
 #############################################
 
 
@@ -634,6 +636,8 @@ three_k_same_n_valid$ascm[6,2] <- cluster.stats(d = dist(df, method = "euclidean
 
 
 
+
+write.xlsx(three_k_same_n_valid, file = "C:/Users/Dell/Desktop/R/masters-thesis/same_n/validation_results/three_k_same_n_valid.xlsx" )
 ################################################################################
 # //////////////////////////////////////////////////////////////////////////// #
 ### ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ###
@@ -994,7 +998,7 @@ four_k_same_n_valid$ascm[6,1] <- rand.index(as.numeric(dataset1$class), as.numer
 four_k_same_n_valid$ascm[6,2] <- cluster.stats(d = dist(df, method = "euclidean") ,as.numeric(dataset1$class), kmascm_data$cluster)$vi
 
 
-
+write.xlsx(four_k_same_n_valid, file = "C:/Users/Dell/Desktop/R/masters-thesis/same_n/validation_results/four_k_same_n_valid.xlsx" )
 
 ################################################################################
 # //////////////////////////////////////////////////////////////////////////// #
@@ -1394,6 +1398,7 @@ five_k_same_n_valid$ascm[6,1] <- rand.index(as.numeric(dataset1$class), as.numer
 five_k_same_n_valid$ascm[6,2] <- cluster.stats(d = dist(df, method = "euclidean") ,as.numeric(dataset1$class), kmascm_data$cluster)$vi
 
 
+write.xlsx(five_k_same_n_valid, file = "C:/Users/Dell/Desktop/R/masters-thesis/same_n/validation_results/five_k_same_n_valid.xlsx" )
 
 ################################################################################
 # //////////////////////////////////////////////////////////////////////////// #
@@ -1810,6 +1815,8 @@ six_k_same_n_valid$ascm[6,1] <- rand.index(as.numeric(dataset1$class), as.numeri
 six_k_same_n_valid$ascm[6,2] <- cluster.stats(d = dist(df, method = "euclidean") ,as.numeric(dataset1$class), kmascm_data$cluster)$vi
 
 
+
+write.xlsx(six_k_same_n_valid, file = "C:/Users/Dell/Desktop/R/masters-thesis/same_n/validation_results/six_k_same_n_valid.xlsx" )
 
 ################################################################################
 # //////////////////////////////////////////////////////////////////////////// #
@@ -2261,6 +2268,8 @@ seven_k_same_n_valid$ascm[6,1] <- rand.index(as.numeric(dataset1$class), as.nume
 seven_k_same_n_valid$ascm[6,2] <- cluster.stats(d = dist(df, method = "euclidean") ,as.numeric(dataset1$class), kmascm_data$cluster)$vi
 
 
+
+write.xlsx(seven_k_same_n_valid, file = "C:/Users/Dell/Desktop/R/masters-thesis/same_n/validation_results/seven_k_same_n_valid.xlsx" )
 
 ################################################################################
 # //////////////////////////////////////////////////////////////////////////// #
@@ -2743,6 +2752,8 @@ eight_k_same_n_valid$ascm[6,2] <- cluster.stats(d = dist(df, method = "euclidean
 
 
 
+write.xlsx(eight_k_same_n_valid, file = "C:/Users/Dell/Desktop/R/masters-thesis/same_n/validation_results/eight_k_same_n_valid.xlsx" )
+
 
 
 ################################################################################
@@ -2796,3 +2807,7 @@ names(averages) <- c("rand", "mvi", "success_rate")
 row.names(averages) <- c("as", "ch", "db", "ascm")
 
 averages
+
+
+write.xlsx(averages, file = "C:/Users/Dell/Desktop/R/masters-thesis/same_n/validation_results/averages.xlsx" )
+
