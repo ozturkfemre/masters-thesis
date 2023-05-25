@@ -327,6 +327,9 @@ column_coefficients[1:9,4] <-  ascm
 ### e.coli ###
 ##############
 
+ecoli <- read_table("real_data_sets/data_sets/ecoli.data", 
+                    col_names = FALSE)
+
 corrplot::corrplot(cor(ecoli[2:8]), method = "number") # pca is not necessary
 
 df3 <- scale(ecoli[2:8])
