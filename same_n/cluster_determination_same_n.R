@@ -196,7 +196,7 @@ k_advancedsilhouette <- function(df, kmin = 2, kmax = 10, algorithm) {
   as <- as[-1]
   as
 }
-k_advancedsilhouette(df,algorithm = "kmeans")
+
 
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// #
@@ -260,8 +260,10 @@ rowna <- c("case_a1", "case_a2", "case_a3", "case_b1", "case_b2", "case_b3")
 
 variances <- list(a1 = c( c(25,0,0,25), c(25,0,0,25)), a2 = c( c(50,0,0,50), c(50,0,0,50)), a3 = c( c(50,0,0,50), c(75,0,0,75) ),
                   b1 = c( c(25,0,0,25), c(25,0,0,25)), b2 = c( c(50,0,0,50), c(50,0,0,50)), b3 = c( c(50,0,0,50), c(75,0,0,75) )
-                  )
+)
 
+
+par(mfrow = c(2,3), bg = "#ffde78")
 x <- list()
 for (i in 1:3) {
   dataset1 <- {
@@ -283,7 +285,8 @@ for (i in 1:3) {
   df <- dataset1[,1:2]
   df <- scale(df)
   df <- as.data.frame(df)
-  
+  plot(df, col = dataset1$class, bty = "l", pch=3, 
+       cex=2,)
   x[[i]] <- df
  
   # cluster number determination
@@ -299,7 +302,7 @@ for (i in 1:3) {
   adjustedsi <- rbind(adjustedsi, ascm)
   df <- data.frame()
 }
-
+x[[1]]
 
 write.csv(x[[1]], file = "C:/Users/Dell/Desktop/R/thesis/same_n/data_sets/2k_case_a1.csv" )
 write.csv(x[[2]], file = "C:/Users/Dell/Desktop/R/thesis/same_n/data_sets/2k_case_a2.csv" )
@@ -528,7 +531,7 @@ adjustedsi <- data.frame()
 ##############
 ### Case A ###
 ##############
-
+par(mfrow = c(2,3), bg = "#ffde78")
 ### A1 ###
 
 dataset1 <- {
@@ -560,6 +563,8 @@ dataset1 <- {
 df <- dataset1[,1:2]
 df <- scale(df)
 df <- as.data.frame(df)
+
+plot(df, col = dataset1$class, bty = "l", pch = 16, cex = 1, xlab = "", ylab = "", main = "case a1")
 
 write.csv(df, file = "C:/Users/Dell/Desktop/R/thesis/same_n/data_sets/4k_case_a1.csv" )
 # cluster number determination
@@ -606,6 +611,10 @@ dataset1 <- {
 df <- dataset1[,1:2]
 df <- scale(df)
 df <- as.data.frame(df)
+
+plot(df, col = dataset1$class, bty = "l", pch = 16, cex = 1, xlab = "", ylab = "", main = "case a2")
+
+
 write.csv(df, file = "C:/Users/Dell/Desktop/R/thesis/same_n/data_sets/4k_case_a2.csv" )
 # cluster number determination
 
@@ -652,6 +661,10 @@ dataset1 <- {
 df <- dataset1[,1:2]
 df <- scale(df)
 df <- as.data.frame(df)
+
+plot(df, col = dataset1$class, bty = "l", pch = 16, cex = 1, xlab = "", ylab = "", main = "case a3")
+
+
 write.csv(df, file = "C:/Users/Dell/Desktop/R/thesis/same_n/data_sets/4k_case_a3.csv" )
 # cluster number determination
 
@@ -705,6 +718,9 @@ df <- dataset1[,1:2]
 df <- scale(df)
 df <- as.data.frame(df)
 
+plot(df, col = dataset1$class, bty = "l", pch = 16, cex = 1, xlab = "", ylab = "", main = "case b1")
+
+
 write.csv(df, file = "C:/Users/Dell/Desktop/R/thesis/same_n/data_sets/4k_case_b1.csv" )
 # cluster number determination
 
@@ -749,6 +765,8 @@ dataset1 <- {
 df <- dataset1[,1:2]
 df <- scale(df)
 df <- as.data.frame(df)
+
+plot(df, col = dataset1$class, bty = "l", pch = 16, cex = 1, xlab = "", ylab = "", main = "case b2")
 
 
 write.csv(df, file = "C:/Users/Dell/Desktop/R/thesis/same_n/data_sets/4k_case_b2.csv" )
@@ -795,6 +813,9 @@ dataset1 <- {
 df <- dataset1[,1:2]
 df <- scale(df)
 df <- as.data.frame(df)
+
+plot(df, col = dataset1$class, bty = "l", pch = 16, cex = 1, xlab = "", ylab = "", main = "case b3")
+
 
 write.csv(df, file = "C:/Users/Dell/Desktop/R/thesis/same_n/data_sets/4k_case_b3.csv" )
 # cluster number determination
